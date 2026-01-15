@@ -1,0 +1,68 @@
+<div class="paige-container">
+    <div class="circle"></div>
+<div class="header">
+    <div class="logo">
+      <img src="assets/logo3.png" alt="icon">
+    </div>
+  </div>
+
+
+<div class="content">
+    <div class="container">
+        <h2>Recuperar Usuario</h2>
+        <p>Ingrese el correo con el que se registró en el sistema, para recibir un código de recuperación</p>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div>
+                <!-- <label for="correo">Correo:</label> -->
+                <input id="correo" formControlName="correo" type="email" />
+            </div>
+            <div class="button-container">
+                <button (click)="redirectTo('')">Regresar</button>
+                <button type="submit" [disabled]="isProcessing">Enviar Código</button>
+            </div>
+        </form>
+    </div>
+ </div>
+</div>
+
+
+<div class="footer">
+    <div class="footer-column">
+      <img src="assets/logo3.png" width="250"  alt="icon">
+    </div>
+    <div class="footer-column">
+  
+      <div class="mi-div">Contacto y Ayuda</div>
+      <div class="social-media">
+      <a href="#" target="_blank">
+        <img src="assets/social/telefono.png" alt="LinkedIn">
+        (02) 2999000</a>
+        <a href="#" target="_blank">
+          <img src="assets/social/celular.png" alt="LinkedIn">
+          (+593) 987654321</a>
+    </div>
+     <div class="social-media" >                 
+     <a href="https://www.facebook.com/" target="_blank">
+      <img src="assets/social/facebook.png" alt="Facebook"> Facebook</a>
+      <a href="#" target="_blank">
+        <img src="assets/social/instagram.png" alt="Instagram">
+        Instagram
+      </a>
+      <a href="#" target="_blank">
+        <img src="assets/social/linkedin.png" alt="LinkedIn">
+        LinkedIn
+      </a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <div class="mi-div">Sobre Nosotros</div>
+      <div>¿Quienes Somos?</div>
+      <div>Trabaja con Nosotros</div>
+      <div>Trasparencia</div>
+    </div>
+    <div class="footer-column">
+      <div class="mi-div">Más Servicios</div>
+      <div>Políticas de Privacidad</div>
+    </div>
+  </div>
+  

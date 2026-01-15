@@ -1,0 +1,119 @@
+/* chatbot.component.css */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  max-height: 500px;
+  background-color: #f9f9f9;
+  border: 1px solid #2acad8;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.chatbot-header {
+  background-color: #2acad8;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #ccc;
+}
+
+.chatbot-messages {
+  padding: 10px;
+  max-height: 350px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #2acad8;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #2acad8;
+  border-radius: 5px;
+}
+
+.chatbot-input button {
+  background-color: #2acad8;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chatbot-input button:hover {
+  background-color: #05b5c2;
+}
+
+.message {
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  word-wrap: break-word;
+}
+
+.message.user {
+  text-align: right;
+  background-color: #ebfdfe;
+  border: 1px solid #b3e5fc;
+}
+
+.message.bot {
+  text-align: left;
+  background-color: #ebfdfe;
+  border: 1px solid #b3e5fc;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.option-button {
+  background-color: #2acad8;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: #05b5c2;
+}
+
+.message-bubble {
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}

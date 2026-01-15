@@ -1,0 +1,46 @@
+<div class="header">
+  <button class="menu-toggle" (click)="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="user-profile">
+    <i class="fas fa-user"></i>
+  </div>
+  <div class="titulo">
+    <h2>Pago de Servicios</h2>
+  </div>
+</div> 
+
+<div class="main-container">
+  <div class="sidebar"> 
+    <div class="logo">
+      <img src="assets/logo3.1.png" alt="icon">
+    </div>
+    <button (click)="redirectTo('cambio-contraseña')"><i class="fas fa-key"></i> Cambio Contraseña</button>
+    <button (click)="redirectTo('visualizacion-saldo')"><i class="fas fa-eye"></i> Visualización de saldo</button>
+    <button (click)="redirectTo('crear-cuenta')"><i class="fas fa-plus"></i> Agregar Cuenta</button>
+    <button (click)="redirectTo('transferencia')"><i class="fas fa-exchange-alt"></i> Transferencia</button>
+    <button (click)="redirectTo('historial-transferencias')"><i class="fas fa-history"></i> Historial de Transferencias</button>
+    <button (click)="redirectTo('/')"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+    </div>
+  <div class="overlay" (click)="toggleSidebar()"></div> 
+
+  <div class="content">
+    <h1>Seleccionar Servicio</h1>
+    <div class="container">
+      <div class="services">
+        <button (click)="seleccionarServicio('Agua')"><i class="fas fa-tint"></i> Agua</button>
+        <button (click)="seleccionarServicio('Luz')"><i class="fas fa-lightbulb"></i> Luz</button>
+        <button (click)="seleccionarServicio('Internet')"><i class="fas fa-wifi"></i> Internet</button>
+      </div>
+      <div class="button-container">
+        <button (click)="redirectTo('visualizacion-saldo')">Regresar</button>
+      </div>
+      <div *ngIf="servicioSeleccionado" class="service-info">
+        <p>Servicio: {{ servicioSeleccionado }}</p>
+        <p>Valor: {{ valorFactura }}</p> 
+        <p>Estado: {{ estado }}</p>
+        <button *ngIf="estado === 'Por pagar'" class="paypal-button" (click)="pagarConPayPal()">Pagar con PayPal</button>
+      </div>
+    </div>
+  </div>
+</div>

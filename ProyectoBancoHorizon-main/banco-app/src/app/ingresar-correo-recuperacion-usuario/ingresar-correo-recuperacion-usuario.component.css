@@ -1,0 +1,540 @@
+
+
+/* Global styles */
+@font-face {
+    font-family: 'Magdelin Alt Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt Regular.woff'),  format('woff');
+    }
+  @font-face {
+    font-family: 'Magdelin Alt Regular Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt Regular Italic.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt Thin.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt Thin Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt Thin Italic.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt ExtraLight';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt ExtraLight.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt ExtraLight Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt ExtraLight Italic.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt Light';
+    font-style: normal;
+    font-weight: normal;
+    src:url('/assets/fonts/Magdelin Alt Light.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt Light Italic';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin Alt Light Italic.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt Text';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt Text.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt Text Italic';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin Alt Text Italic.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt Medium.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt Medium Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt Medium Italic.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt SemiBold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt SemiBold.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt SemiBold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt SemiBold Italic.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt Bold.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt Bold Italic.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt ExtraBold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt ExtraBold.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt ExtraBold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt ExtraBold Italic.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt Black';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin Alt Black.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Alt Black Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Alt Black Italic.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Regular';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin Regular.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Regular Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Regular Italic.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Thin.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Thin Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Thin Italic.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin ExtraLight';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin ExtraLight.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin ExtraLight Italic';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin ExtraLight Italic.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Light';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin Light.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Light Italic';
+    font-style: normal;
+    font-weight: normal;
+    src:url('/assets/fonts/Magdelin Light Italic.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Text';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin Text.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Text Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Text Italic.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Medium';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin Medium.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Medium Italic';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin Medium Italic.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin SemiBold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin SemiBold.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin SemiBold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin SemiBold Italic.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Bold.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin Bold Italic.woff'), format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin ExtraBold';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin ExtraBold.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin ExtraBold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin ExtraBold Italic.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Black';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('/assets/fonts/Magdelin Black.woff') ,format('woff');
+    }
+    @font-face {
+    font-family: 'Magdelin Black Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/assets/fonts/Magdelin Black Italic.woff'), format('woff');
+    }
+  /* styles.css */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  
+  }
+  .page-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* Cambiar el fondo a blanco */
+  padding: 20px;
+  border-bottom: 8px solid #2cb5d3; /* Línea azul en la parte inferior */
+  position: static;
+  top: 0;
+  z-index: 1000;
+  height: 55px;
+  padding: 30px;
+  }
+  
+  .header .logo {
+  margin-left: 20px; /* Mueve el logo un poco hacia la derecha */
+  }
+  
+  .logo img {
+  height: 200px; /* Ajusta la altura del logo */
+  width: auto;
+  }
+
+h3 {
+    color: #1A61A0;
+    text-align: center;
+}
+
+label {
+    color: #1A61A0;
+    font-weight: bold;
+}
+
+.content {
+    flex: 1 0 auto;
+    padding: 20px;
+    background: #F3F5F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(70vh - 75px);
+}
+
+.container {
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-height: calc(100vh - 75px);
+}
+
+.container p {
+    margin-bottom: 20px;
+    color: #1A61A0;
+    text-align: center;
+    padding: 10px;
+}
+
+form div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #EBEBEB;
+    margin: 0 auto;
+    display: block;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-container button {
+    width: 30%;
+    padding: 10px;
+    background-color: #37b6e9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button-container button:hover {
+    background-color: #29AECC;
+}
+
+/* Estilo del footer */
+.footer {
+    background-color: #29AECC;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    overflow: hidden;
+    margin-bottom: 0;
+    font-family: 'Magdelin Alt Regular';
+    font-size:  20px;
+    margin-top: auto;
+    position: fixed;
+    
+  }
+  .footer-column {
+    padding:  0;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0px;
+    font-family: 'Magdelin Alt Regular';
+    font-size:  20px;
+   /* Alinea el contenido de cada columna a la izquierda */
+  }
+  .footer-column .img{
+  height: 70px;
+  margin-bottom: 0;
+  transform: translateY(-10px); 
+  
+  }
+  .social-media {
+  margin-top: 10px;
+  }
+  .footer .social-media a {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  color: white;
+  text-decoration: none;
+  font-family: 'Magdelin Alt Regular';
+    font-size:  20px;
+  }
+  .footer .social-media a img {
+  width: 24px; /* Ajusta el tamaño de los íconos */
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+  
+  }
+  .footer-column .mi-div {
+  margin-left: 20px; /* Ajusta el valor según sea necesario */
+  margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .footer a {
+    color: #F7F4E7;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+/* Media Queries */
+@media (max-width: 450px) {
+  /* Ajustes para el contenedor de la página */
+  .page-container {
+      padding: 0 10px; /* Ajusta el padding para adaptarse mejor a pantallas pequeñas */
+  }
+
+  /* Ajustes para el header */
+  .header {
+      padding: 10px 15px; /* Reduce el padding del header */
+      height: auto; /* Permite que el header se ajuste a su contenido */
+      flex-direction: column; /* Coloca el logo y otros elementos en una columna para ahorrar espacio */
+  }
+
+  .header .logo {
+      margin-left: 0; /* Centra el logo en pantallas pequeñas */
+      text-align: center;
+  }
+
+  .logo img {
+      height: 200px; /* Reduce la altura del logo para pantallas pequeñas */
+      width: auto;
+  }
+
+  h3 {
+      font-size: 18px; /* Reduce el tamaño del título */
+  }
+
+  label {
+      font-size: 14px; /* Reduce el tamaño de la fuente en los labels */
+  }
+
+  .content {
+      padding: 10px; /* Reduce el padding del contenido */
+      flex-direction: column; /* Asegura que el contenido se muestre en una columna */
+      padding-bottom: 100px;
+  }
+
+  .container {
+      width: 100%; /* Ocupa todo el ancho disponible */
+      max-width: none; /* Elimina el ancho máximo para pantallas pequeñas */
+      padding: 15px; /* Ajusta el padding */
+      margin: 10px 0; /* Reduce el margen superior e inferior */
+      box-shadow: none; /* Elimina la sombra para simplificar el diseño en pantallas pequeñas */
+      border-radius: 5px; /* Reduce el radio de las esquinas */
+  }
+
+  .container p {
+      font-size: 14px; /* Reduce el tamaño de la fuente del texto */
+      padding: 5px; /* Reduce el padding */
+  }
+
+  input {
+      width: calc(100% - 15px); /* Ajusta el ancho del input para pantallas pequeñas */
+      padding: 8px; /* Reduce el padding del input */
+      font-size: 14px; /* Reduce el tamaño de la fuente en los inputs */
+  }
+
+  .button-container {
+      flex-direction: column; /* Asegura que los botones se muestren en una columna */
+      gap: 5px; /* Reduce el espacio entre los botones */
+  }
+
+  .button-container button {
+      width: 100%; /* Asegura que los botones ocupen todo el ancho disponible */
+      font-size: 14px; /* Reduce el tamaño de la fuente en los botones */
+      padding: 8px; /* Reduce el padding de los botones */
+      margin: 5px 0; /* Ajusta el margen de los botones */
+  }
+
+  /* Ajustes para el footer */
+  .footer {
+      padding: 10px; /* Ajusta el padding del footer */
+      flex-direction: column; /* Coloca los elementos del footer en una columna */
+      align-items: center; /* Centra el contenido del footer */
+      text-align: center; /* Centra el texto en el footer */
+      position: relative;
+      margin-top: 20px;
+  }
+
+  .footer-column {
+      min-width: 100%; /* Elimina el ancho mínimo */
+      margin-bottom: 10px; /* Añade un margen inferior entre columnas */
+      align-items: center; /* Centra el contenido de las columnas */
+  }
+
+  .footer-column .img {
+      height: 50px; /* Reduce el tamaño de las imágenes en el footer */
+      margin-bottom: 5px; /* Reduce el margen inferior */
+      transform: translateY(0); /* Elimina cualquier desplazamiento vertical */
+  }
+
+  .footer .social-media a {
+      font-size: 14px; /* Reduce el tamaño de la fuente en los enlaces de redes sociales */
+      margin-left: 0px;
+  }
+
+  .footer .social-media a img {
+      width: 20px; /* Ajusta el tamaño de los íconos */
+      height: 20px;
+      margin-right: 5px; /* Reduce el margen derecho de los íconos */
+  }
+
+  .footer-column .mi-div {
+      font-size: 16px; /* Reduce el tamaño de la fuente en los encabezados de las columnas */
+      margin-left: 0; /* Elimina el margen izquierdo */
+  }
+
+  .footer a {
+      font-size: 14px; /* Reduce el tamaño de la fuente en los enlaces */
+  }
+}

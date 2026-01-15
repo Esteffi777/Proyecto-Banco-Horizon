@@ -1,0 +1,24 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const clienteRoutes_1 = __importDefault(require("./clienteRoutes"));
+const cuentaRoutes_1 = __importDefault(require("./cuentaRoutes"));
+const transferenciaRoutes_1 = __importDefault(require("./transferenciaRoutes"));
+const loginUsuarioRoutes_1 = __importDefault(require("./loginUsuarioRoutes"));
+const administradorRoutes_1 = __importDefault(require("./administradorRoutes"));
+const loginAdministradorRoutes_1 = __importDefault(require("./loginAdministradorRoutes"));
+const auditoriaRoutes_1 = __importDefault(require("./auditoriaRoutes"));
+const emailRoutes_1 = __importDefault(require("./emailRoutes"));
+const router = (0, express_1.Router)();
+router.use(clienteRoutes_1.default);
+router.use(cuentaRoutes_1.default);
+router.use(transferenciaRoutes_1.default);
+router.use(loginUsuarioRoutes_1.default);
+router.use(administradorRoutes_1.default);
+router.use(loginAdministradorRoutes_1.default);
+router.use(auditoriaRoutes_1.default);
+router.use(emailRoutes_1.default);
+exports.default = router;

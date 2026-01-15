@@ -1,0 +1,281 @@
+/* styles.css */
+body, html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #8ADBE5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* Cambiar el fondo a blanco */
+  padding: 20px;
+  border-bottom: 8px solid #2cb5d3; /* Línea azul en la parte inferior */
+  position: static;
+  top: 0;
+  z-index: 1000;
+  height: 55px;
+  padding: 30px;
+}
+
+.header .logo {
+  margin-left: 20px; /* Mueve el logo un poco hacia la derecha */
+}
+
+.logo img {
+  height: 200px; /* Ajusta la altura del logo */
+  width: auto;
+}
+
+.header h2 {
+  color: white;
+  margin: 0;
+  font-size: 40px;
+  padding: 8px;
+}
+
+.content {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #F7F4E7;
+  min-height: calc(100vh - 75px);
+}
+
+.verify-container {
+  width: 50%;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.verify-container h2 {
+  color: #1A61A0;
+}
+
+.verify-container p {
+  margin-bottom: 20px;
+  color: #1A61A0; 
+}
+
+.code-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.code-inputs input {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  background: #EBEBEB;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.verify-container button {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #29AECC;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.verify-container button:hover {
+  background-color: #1A61A0;
+}
+
+/* Footer styling */
+.footer {
+  flex-shrink: 0;
+  background-color: #29AECC;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  overflow: hidden;
+  margin-bottom: 0; /* Asegúrate de que el margen inferior sea cero */
+}
+
+  .footer-column {
+    padding:  10px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0px;
+    font-family: 'Magdelin Alt Regular';
+    font-size:  20px;
+   /* Alinea el contenido de cada columna a la izquierda */
+  }
+  .footer-column .img{
+  height: 70px;
+  margin-bottom: 0;
+  transform: translateY(-10px); 
+  
+  }
+  .social-media {
+  margin-top: 10px;
+  }
+  .footer .social-media a {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  color: white;
+  text-decoration: none;
+  font-family: 'Magdelin Alt Regular';
+    font-size:  20px;
+  }
+  .footer .social-media a img {
+  width: 24px; /* Ajusta el tamaño de los íconos */
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+  
+  }
+  .footer-column .mi-div {
+  margin-left: 20px; /* Ajusta el valor según sea necesario */
+  margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .footer a {
+    color: #F7F4E7;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+@media (max-width: 768px) {
+  .verify-container {
+    width: 65%;
+    padding: 15px;
+  }
+
+  .code-inputs {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .code-inputs input {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .footer{
+    height: 45%;
+  }
+}
+
+@media (max-width: 450px) {
+  /* Header */
+  .header {
+    flex-direction: column; /* Acomoda los elementos en una columna para pantallas pequeñas */
+    align-items: center;
+    padding: 15px; /* Reduce el padding */
+  }
+
+  .header .logo {
+    margin: -20px auto 10px auto; /* Centra el logo y ajusta el margen inferior */
+  }
+
+  .logo img {
+    height: 120px; /* Reduce el tamaño del logo */
+  }
+
+  .header h2 {
+    font-size: 24px; /* Reduce el tamaño del texto del encabezado */
+    text-align: center; /* Asegura que el título esté centrado */
+  }
+
+  /* Content */
+  .content {
+    padding: 10px; /* Reduce el padding del contenido */
+    min-height: calc(100vh - 130px); /* Ajusta el tamaño mínimo del contenido teniendo en cuenta la altura del header y footer */
+  }
+
+  .verify-container {
+    width: 80%; /* Ajusta el ancho del contenedor */
+    padding: 15px; /* Reduce el padding */
+  }
+
+  .verify-container h2 {
+    font-size: 20px; /* Reduce el tamaño del título */
+  }
+
+  .verify-container p {
+    font-size: 14px; /* Reduce el tamaño del texto */
+    margin-bottom: 15px;
+  }
+
+  .code-inputs input {
+    width: 30px; /* Reduce el tamaño de los campos de código */
+    height: 30px;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .verify-container button {
+    width: 80%; /* Aumenta el ancho del botón para ajustarse mejor a la pantalla */
+    font-size: 16px; /* Reduce el tamaño de la fuente del botón */
+    padding: 8px; /* Reduce el padding del botón */
+    margin-top: 15px; /* Ajusta el margen superior */
+  }
+
+ /* Footer */
+ .footer {
+  flex-direction: column;
+  padding: 15px 10px; /* Añade más padding horizontal */
+  text-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-column {
+  width: 100%; /* Mantiene las columnas al 100% de ancho */
+  align-items: center;
+  margin-bottom: 15px; /* Aumenta el margen inferior entre columnas */
+}
+
+.footer .social-media a {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.footer .social-media a img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-column .mi-div {
+  margin-left: 0;
+  text-align: center;
+}
+}

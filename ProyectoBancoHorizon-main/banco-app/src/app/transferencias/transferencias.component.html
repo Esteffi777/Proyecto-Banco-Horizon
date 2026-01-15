@@ -1,0 +1,93 @@
+<div class="header">
+  <button class="menu-toggle" (click)="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="user-profile">
+    <i class="fas fa-user"></i>
+  </div>
+  <div class="titulo">
+    <h2>Transferencias</h2>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="sidebar"> 
+    <div class="logo">
+      <img src="assets/logo3.1.png" alt="icon">
+    </div>
+    <button (click)="redirectTo('cambio-contraseña')"><i class="fas fa-key"></i> Cambio Contraseña</button>
+    <button (click)="redirectTo('crear-cuenta')"><i class="fas fa-plus"></i> Agregar Cuenta</button>
+    <button (click)="redirectTo('visualizacion-saldo')"><i class="fas fa-eye"></i> Visualización de Saldo</button>
+    <button (click)="redirectToHistorialTransferencias()"><i class="fas fa-history"></i> Historial de Transferencias</button>
+    <button (click)="redirectTo('seleccion-servicio')"><i class="fas fa-money-bill-wave"></i> Pagar Servicios</button>
+    <button (click)="redirectTo('/')"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+    </div>
+  <div class="overlay-barra" (click)="toggleSidebar()"></div> 
+
+  <div class="content" [class.blurred]="mostrarConfirmacion">
+    <div class="container">
+      <form (submit)="confirmarTransferencia()">
+        <!-- Cuenta Origen Field -->
+        <div class="form-group">
+          <label for="cuentaOrigen">Cuenta Origen</label>
+          <select id="cuentaOrigen" [(ngModel)]="cuentaOrigen" name="cuentaOrigen" (change)="onCuentaOrigenChange()" required>
+            <option *ngFor="let cuenta of cuentas" [ngValue]="cuenta.numeroCuenta">{{ cuenta.numeroCuenta }}</option>
+          </select>
+          <small *ngIf="!cuentaOrigen">Selecciona una cuenta origen</small>
+        </div>
+        <!-- Saldo de la cuenta Origen -->
+        <div class="form-group" *ngIf="cuentaOrigen">
+          <label>Saldo de la cuenta origen: {{ saldoCuentaOrigen | currency }}</label>
+        </div>
+        <!-- Cuenta Destino Field -->
+        <div class="form-group">
+          <label for="cuentaDestino">Cuenta Destino</label>
+          <div class="input-group">
+            <input id="cuentaDestino" type="text" [(ngModel)]="cuentaDestino" name="cuentaDestino" (blur)="buscarTitularCuentaDestino()" placeholder="Número de cuenta destino" required>
+            <button type="button" (click)="buscarTitularCuentaDestino()" aria-label="Buscar cuenta" class="btn-search">
+              <i class="fas fa-search"></i> <!-- Utiliza un ícono de búsqueda -->
+            </button>
+          </div>
+          <div *ngIf="nombreTitular && apellidoTitular">
+            <p class="account-owner"><strong>La cuenta pertenece a: {{ nombreTitular }} {{ apellidoTitular }}</strong></p>
+          </div>
+          <small *ngIf="!cuentaDestino">Ingresa un número de cuenta destino</small>
+        </div>
+        <!-- Monto Field -->
+        <div class="form-group">
+          <label for="monto">Monto</label>
+          <input id="monto" type="number" [(ngModel)]="monto" name="monto" placeholder="Monto" min="1" required>
+          <small *ngIf="!monto || monto <= 0">Ingresa un monto válido a transferir</small>
+        </div>
+        <!-- Descripción Field -->
+        <div class="form-group">
+          <label for="descripcion">Descripción</label>
+          <textarea id="descripcion" [(ngModel)]="descripcion" name="descripcion" rows="3" placeholder="Pago Luz, etc."></textarea>
+          <small *ngIf="descripcion.trim() === ''">Obligatorio</small>
+        </div>
+        <!-- Submit Button -->
+        <div class="button-container">
+          <button (click)="redirectToVisualizarSaldo()" class="btn-secondary">Regresar</button>
+          <button type="submit" [disabled]="isProcessing" class="btn-primary">Confirmar Transferencia</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Confirmación -->
+  <div class="overlay" *ngIf="mostrarConfirmacion">
+    <div class="ventana-confirmacion">
+      <h2>Confirmar Transferencia</h2>
+      <p>Cuenta Origen: {{ cuentaOrigen }}</p>
+      <p>Cuenta Destino: {{ cuentaDestino }}</p>
+      <p>Destinatario: {{ nombreTitular }} {{ apellidoTitular }}</p>
+      <p>Monto: {{ monto | currency }}</p>
+      <div>
+        <label for="codigoVerificacion">Código de Verificación: </label>
+        <input id="codigoVerificacion" type="text" [(ngModel)]="codigoIngresado" name="codigoVerificacion" placeholder="Ingresa el código de verificación" required>
+      </div>
+      <button (click)="cancelarConfirmacion()">Cancelar</button>
+      <button (click)="realizarTransferencia()" [disabled]="isProcessing">Confirmar</button>
+    </div>
+  </div>
+</div>

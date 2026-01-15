@@ -1,0 +1,6 @@
+node_modules
+Base_Datos_API_REST/.env
+**/dialogflow-credentials.json
+**/*.env
+.env
+.env.*

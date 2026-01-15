@@ -1,0 +1,472 @@
+/* home.component.css */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F4E7;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* Cambiar el fondo a blanco */
+  padding: 20px;
+  border-bottom: 8px solid #2cb5d3; /* Línea azul en la parte inferior */
+  position: static;
+  top: 0;
+  z-index: 1000;
+  height: 55px;
+  padding: 30px;
+}
+
+.header .logo {
+  margin-left: 20px; /* Mueve el logo un poco hacia la derecha */
+}
+
+.logo img {
+  height: 200px; /* Ajusta la altura del logo */
+  width: auto;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px; /* Mueve los botones un poco hacia la izquierda */
+}
+
+.buttons-container button {
+  background-color: white; /* Fondo blanco inicial */
+  color: #2cb5d3; /* Texto azul */
+  font-family: 'Magdelin Alt Text';
+  border: 3px solid #2cb5d3; /* Borde azul */
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para color de fondo y texto */
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.buttons-container button:hover {
+  background-color: #2cb5d3; /* Fondo azul al pasar el mouse */
+  color: white; /* Texto blanco */
+}
+
+/* Ensure buttons have no outline when focused */
+.buttons-container button:focus {
+    outline: none;
+}
+
+/* Banner */
+.banner {
+    /* Cambia el color de fondo según la imagen de referencia */
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.banner h2 {
+    color: black;
+    font-size: 24px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 1100px;/* Ajusta esta altura máxima según sea necesario */
+  display: block;
+  object-fit: cover;
+  border: 1px solid #9FDDF4;
+}
+
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: #7ad2e6; /* Color celeste */
+  border: none;
+  padding: 20px; /* Tamaño aumentado */
+  cursor: pointer;
+  font-size: 6em; /* Tamaño del icono aumentado */
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-button:hover {
+  color: #5ebcd2; /* Un color celeste un poco más oscuro para el hover */
+}
+
+.carousel-button.prev {
+  left: -17px; /* Separación del borde izquierdo */
+}
+
+.carousel-button.next {
+  right: -15px; /* Separación del borde derecho */
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.why-choose-us h2 {
+    color: #29AECC;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.reasons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.reason {
+    background-color: #8ADBE5;
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+    border-radius: 5px;
+}
+
+.reason.piggybank {
+    flex-direction: row-reverse;
+}
+
+.reason p {
+    color: white;
+    margin: 0;
+    text-align: justify;
+}
+
+.reason img {
+    width: 25%; /* Ancho completo para imágenes */
+    height: auto;
+    border-radius: 5px; /* Opcional: Agregar borde redondeado a las imágenes */
+}
+
+/* Servicios Section */
+.servicio h2 {
+    color: #29AECC;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #8ADBE5;
+  }
+  
+  .services h2 {
+    color: white;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .service-cards {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    background-color: #8ADBE5;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background-color: #8ADBE5;
+    width: 20%;
+    margin-bottom: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+    border: 4px solid white;
+    margin: 10px;
+  }
+  
+  .service-card h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .service-card p {
+    color: white;
+    margin: 0;
+    text-align: justify;
+    font-size: 15px;
+    padding: 15px;
+  }
+  
+  .service-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 15px;
+  }
+  
+  /* Sucursales Section */
+  .branches {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .branches h2 {
+    color: #29AECC;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .branch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFF7F8;
+    padding: 20px;
+    border: 5px solid #8ADBE5;
+    margin: 15px;
+    border-radius: 10px;
+  }
+  
+  .branch img {
+    width: 40%;
+    border-radius: 5px;
+    margin-right: 100px;
+  }
+  
+  .branch-details {
+    text-align: left;
+    width: 40%;
+  }
+  
+  .branch-details h3 {
+    color: #1A61A0;
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  
+  .branch-details p, .branch-details ul {
+    color: #333;
+    margin: 0;
+  }
+  
+  .branch-details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .branch-details ul li {
+    margin: 5px 0;
+  }
+
+  .chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2acad8;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .chatbot-toggle:hover {
+    background: #24b0bc;
+  }
+  
+  /* Footer styling */
+ .footer {
+  background-color: #2cb5d3;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  overflow: hidden;
+  margin-bottom: 0;
+  font-family: 'Magdelin Alt Regular';
+  font-size:  20px;
+  
+}
+.footer-column {
+  padding:  0;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0px;
+  font-family: 'Magdelin Alt Regular';
+  font-size:  20px;
+ /* Alinea el contenido de cada columna a la izquierda */
+}
+.footer-column .img{
+height: 70px;
+margin-bottom: 0;
+transform: translateY(-10px); 
+
+}
+.social-media {
+margin-top: 10px;
+}
+.footer .social-media a {
+display: flex;
+align-items: center;
+margin: 5px 0;
+color: white;
+text-decoration: none;
+font-family: 'Magdelin Alt Regular';
+  font-size:  20px;
+}
+.footer .social-media a img {
+width: 24px; /* Ajusta el tamaño de los íconos */
+height: 24px;
+margin-right: 10px;
+object-fit: contain;
+
+}
+.footer-column .mi-div {
+margin-left: 20px; /* Ajusta el valor según sea necesario */
+margin-bottom: 10px;
+  font-weight: bold;
+}
+.footer a {
+  color: #F7F4E7;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-card {
+    width: 90%;
+  }
+
+  .branch {
+    flex-direction: column;
+  }
+
+  .branch img {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .branch-details {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 450px) {
+  .header .logo img {
+    width: 134px;
+    height: 100%; /* Ajusta para mantener la proporción */
+    justify-content: left;
+  }
+
+  .buttons-container {
+    display: flex; /* Asegura que los botones estén alineados en una sola línea */
+    flex-wrap: nowrap; /* Evita que los botones se envuelvan en varias líneas */
+    justify-content: center; /* Centra los botones dentro del contenedor */
+  }
+
+  .buttons-container button {
+    font-size: 15px; /* Ajusta el tamaño del texto en los botones */
+    padding: 6px 10px; /* Ajusta el espacio interno (padding) de los botones */
+    margin: 4px; /* Añade un margen entre los botones */
+  }
+
+  .carousel img {
+    height: auto; /* Ajusta la altura para mantener la proporción */
+    width: 100%;
+  }
+
+  .service-card,
+  .branch-details {
+    padding: 10px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+
+  .chatbot-toggle {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .reason,
+  .service-card,
+  .branch {
+    flex: 1 1 100%;
+  }
+
+  .reason,
+  .branch-details {
+    text-align: center;
+  }
+
+  .buttons-container button {
+    margin-bottom: 10px;
+  }
+}
+

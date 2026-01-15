@@ -1,0 +1,353 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F4E7;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+  
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* Cambiar el fondo a blanco */
+  padding: 20px;
+  border-bottom: 8px solid #2cb5d3; /* Línea azul en la parte inferior */
+  position: static;
+  top: 0;
+  z-index: 1000;
+  height: 55px;
+  padding: 30px;
+}
+
+.header .logo {
+  margin-left: 20px; /* Mueve el logo un poco hacia la derecha */
+}
+
+.logo img {
+  height: 200px; /* Ajusta la altura del logo */
+  width: auto;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    background: #F7F4E7;
+    min-height: calc(100vh - 50px);
+}
+  
+.verify-container {
+    width: 50%;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+  
+.verify-container h2 {
+    color: #1A61A0;
+}
+  
+.verify-container p {
+    margin-bottom: 20px;
+    color: #1A61A0; 
+}
+
+.code-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.verify-container p {
+    margin-bottom: 20px;
+    color: #1A61A0; 
+  }
+  
+  .code-inputs input {
+    width: 35px; /* Aumenta ligeramente el ancho del input */
+    height: 35px; /* Ajusta la altura para que se adecue al font-size */
+    padding: 5px; /* Reduce el padding para asegurar que el texto no se corte */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    border: 1px solid #ccc;
+    background: #EBEBEB;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el padding y el border estén incluidos en el tamaño */
+}
+  
+.verify-container button {
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #37b6e9;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.verify-container button:hover {
+    background-color: #1A61A0;
+}
+/* Footer styling */
+.footer {
+  flex-shrink: 0;
+  background-color: #29AECC;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  overflow: hidden;
+  margin-bottom: 0; /* Asegúrate de que el margen inferior sea cero */
+}
+
+  .footer-column {
+    padding:  10px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0px;
+    font-family: 'Magdelin Alt Regular';
+    font-size:  20px;
+   /* Alinea el contenido de cada columna a la izquierda */
+  }
+  .footer-column .img{
+  height: 70px;
+  margin-bottom: 0;
+  transform: translateY(-10px); 
+  
+  }
+  .social-media {
+  margin-top: 10px;
+  }
+  .footer .social-media a {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  color: white;
+  text-decoration: none;
+  font-family: 'Magdelin Alt Regular';
+    font-size:  20px;
+  }
+  .footer .social-media a img {
+  width: 24px; /* Ajusta el tamaño de los íconos */
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+  
+  }
+  .footer-column .mi-div {
+  margin-left: 20px; /* Ajusta el valor según sea necesario */
+  margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .footer a {
+    color: #F7F4E7;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  /* Media Queries */
+
+/* Para pantallas de 768px o menos */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px; /* Reduce el padding del header */
+    height: auto;
+    margin-bottom: 0; /* Permite que la altura se ajuste automáticamente */
+  }
+
+  .header .logo img {
+    height: 200px;
+  }
+
+  .content {
+    padding: 15px; /* Reduce el padding del contenedor de contenido */
+  }
+
+  .verify-container {
+    width: 80%; /* Aumenta el ancho del contenedor de verificación */
+    padding: 20px; /* Reduce el padding interno */
+  }
+
+  .verify-container h2 {
+    font-size: 30px; /* Ajusta el tamaño del texto del título */
+  }
+
+  .verify-container p {
+    font-size: 16px; /* Ajusta el tamaño del texto del párrafo */
+  }
+
+  .code-inputs input {
+    width: 35px; /* Ajusta el tamaño de los inputs */
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .verify-container button {
+    width: 100%; /* Asegura que el botón ocupe todo el ancho disponible */
+    font-size: 16px; /* Ajusta el tamaño de la fuente del botón */
+  }
+
+  .footer {
+    padding: 15px 0; /* Reduce el padding del footer */
+    flex-direction: column; /* Cambia la dirección de los elementos en el footer */
+    align-items: center; /* Centra los elementos dentro del footer */
+  }
+
+  .footer-column {
+    min-width: auto; /* Ajusta el ancho mínimo de las columnas */
+    margin: 10px 0; /* Ajusta los márgenes */
+    text-align: center; /* Centra el texto en cada columna del footer */
+  }
+
+  .footer .social-media a {
+    font-size: 16px; /* Ajusta el tamaño de la fuente de los enlaces en el footer */
+  }
+
+  .footer .social-media a img {
+    width: 20px; /* Ajusta el tamaño de los íconos de redes sociales */
+    height: 20px;
+  }
+}
+
+/* Para pantallas de 576px o menos */
+@media (max-width: 576px) {
+  .header {
+    padding: 10px; /* Reduce aún más el padding del header */
+  }
+
+  .header .logo img {
+    height: 100px; /* Ajusta la altura del logo */
+  }
+
+  .content {
+    padding: 10px; /* Reduce el padding del contenedor de contenido */
+  }
+
+  .verify-container {
+    width: 90%; /* Ajusta el ancho del contenedor de verificación */
+    padding: 15px; /* Reduce el padding interno */
+  }
+
+  .verify-container h2 {
+    font-size: 25px; /* Ajusta el tamaño del texto del título */
+  }
+
+  .verify-container p {
+    font-size: 14px; /* Ajusta el tamaño del texto del párrafo */
+  }
+
+  .code-inputs input {
+    width: 30px; /* Ajusta el tamaño de los inputs */
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .verify-container button {
+    font-size: 14px; /* Ajusta el tamaño de la fuente del botón */
+  }
+
+  .footer {
+    padding: 10px 0; /* Reduce el padding del footer */
+  }
+
+  .footer-column {
+    min-width: auto; /* Ajusta el ancho mínimo de las columnas */
+    margin: 5px 0; /* Ajusta los márgenes */
+  }
+
+  .footer .social-media a {
+    font-size: 14px; /* Ajusta el tamaño de la fuente de los enlaces en el footer */
+  }
+
+  .footer .social-media a img {
+    width: 18px; /* Ajusta el tamaño de los íconos de redes sociales */
+    height: 18px;
+  }
+}
+/* Para pantallas de 450px o menos */
+@media (max-width: 450px) {
+  .header .logo img {
+    height: 150px;
+  }
+
+  .header {
+    height: auto; /* Permite que el header se ajuste automáticamente */
+    padding: 10px 0; /* Ajusta el padding del header */
+    margin-bottom: 0; /* Asegúrate de que no haya margen debajo del header */
+  }
+
+  .content {
+    padding: 10px; 
+    height: auto; /* Ajusta la altura automáticamente según el contenido */
+  }
+
+  .verify-container {
+    width: 100%; /* Ajusta el ancho del contenedor de verificación */
+    padding: 15px; /* Reduce el padding interno */
+  }
+
+  .verify-container h2 {
+    font-size: 20px; /* Ajusta el tamaño del texto del título */
+  }
+
+  .verify-container p {
+    font-size: 12px; /* Ajusta el tamaño del texto del párrafo */
+  }
+
+  .code-inputs input {
+    width: 25px; /* Ajusta el tamaño de los inputs */
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .verify-container button {
+    font-size: 12px; /* Ajusta el tamaño de la fuente del botón */
+  }
+
+  .footer {
+    padding: 15px 10px; /* Asegúrate de que haya suficiente padding pero no en exceso */
+    font-size: 14px; /* Reduce el tamaño de la fuente para que el contenido encaje mejor */
+    flex-direction: column; /* Cambia la disposición de los elementos a una columna en lugar de filas */
+    align-items: center; /* Centra los elementos del footer */
+  }
+
+  .footer-column {
+    min-width: auto; /* Permite que las columnas se adapten al espacio disponible */
+    text-align: center; /* Centra el texto dentro de cada columna */
+    margin: 5px 0; /* Ajusta los márgenes para evitar espacios en blanco */
+  }
+
+  .footer .social-media {
+    margin-top: 5px; /* Ajusta el margen superior para las redes sociales */
+  }
+
+  .footer .social-media a {
+    font-size: 14px; /* Ajusta el tamaño de la fuente de los enlaces en el footer */
+  }
+
+  .footer .social-media a img {
+    width: 20px; /* Ajusta el tamaño de los íconos de redes sociales */
+    height: 20px;
+  }
+}

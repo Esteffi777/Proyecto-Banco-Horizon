@@ -1,0 +1,174 @@
+<!-- home.component.html -->
+<div class="header">
+  <div class="logo">
+    <img src="assets/logo3.png" alt="icon">
+  </div>
+  <div class="buttons-container">
+    <button (click)="redirectTo('registrar-usuario')">Abrir Cuenta</button>
+    <button (click)="redirectTo('login')">Acceso Clientes</button>
+  </div>
+</div>
+
+<div class="carousel">
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img src="assets/img/Banner1.1.jpg" alt="Slide 1">
+      </div>
+      <div class="carousel-slide">
+        <img src="assets/img/Banner2.2.jpg" alt="Slide 2">
+      </div>
+      <div class="carousel-slide">
+        <img src="assets/img/Banner3.3.jpg" alt="Slide 3">
+      </div>
+    </div>
+    <button class="carousel-button prev" (click)="prevSlide()">&#10094;</button>
+    <button class="carousel-button next" (click)="nextSlide()">&#10095;</button>
+  </div>
+  
+  
+  <div class="why-choose-us">
+    <h2>¿Por Qué Elegirnos?</h2>
+    <div class="reasons">
+      <div class="reason">
+        <img src="assets/img/img1.jpg" width="300" height="200" alt="Reason 1">
+        <p>En Horizon Bank, facilitamos el acceso a tarjetas de crédito y débito que pueden ser utilizadas tanto para compras nacionales como internacionales. Con nuestro sistema seguro y confiable, podrás realizar tus compras con tranquilidad y disfrutar de beneficios exclusivos. Nuestro servicio de atención al cliente está disponible las 24 horas para asistirte en cualquier momento.</p>
+      </div>
+      <div class="reason piggybank">
+        <img src="assets/img/img2.jpg" width="300" height="200" alt="Reason 2">
+        <p>Horizon Bank se dedica a ayudarte a ahorrar de manera efectiva. Ofrecemos diversas cuentas de ahorro con atractivas tasas de interés que se adaptan a tus necesidades. Además, contamos con herramientas y asesoría personalizada para que puedas alcanzar tus metas financieras a corto y largo plazo. Empieza a ahorrar hoy mismo y asegura tu futuro con nosotros.</p>
+      </div>
+      <div class="reason">
+        <img src="assets/img/img3.jpg" width="300" height="200" alt="Reason 3">
+        <p>En Horizon Bank, entendemos la importancia de tener acceso rápido y fácil a préstamos y depósitos. Por eso, hemos simplificado nuestros procesos para que puedas obtener financiamiento de manera ágil y sin complicaciones. Nuestros préstamos se adaptan a tus necesidades y te ofrecemos condiciones favorables para que puedas alcanzar tus objetivos. Además, con nuestro sistema de depósitos rápidos, tu dinero estará disponible cuando más lo necesites.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Servicios Section -->
+   <div class="servicio">
+  <h2>Nuestros Servicios</h2></div>
+  <div class="services">
+    
+    <div class="service-cards">
+      <div class="service-card">
+        <img src="assets/img/vivienda.png" alt="Préstamo vivienda">
+        <h3>Préstamos Hipotecarios</h3>
+        <p>Obtén el hogar de tus sueños con nuestros préstamos hipotecarios a tasas competitivas. Financia tu casa con planes de pago flexibles y asesoramiento personalizado.</p>
+      </div>
+      <div class="service-card">
+        <img src="assets/img/dinero2.png" alt="Ahorro flexible">
+        <h3>Ahorro flexible</h3>
+        <p>Ahorra a tu propio ritmo con nuestras cuentas de ahorro flexible. Disfruta de tasas de interés atractivas y acceso fácil a tu dinero cuando lo necesites.</p>
+      </div>
+      <div class="service-card">
+        <img src="assets/img/prestamo2.png" alt="Préstamo">
+        <h3>Préstamos sin Garantes</h3>
+        <p>Accede a préstamos rápidos y sencillos sin necesidad de garantes. Soluciones financieras adaptadas a tus necesidades con aprobación inmediata</p>
+      </div>
+      <div class="service-card">
+        <img src="assets/img/inversion2.png" alt="Inversiones">
+        <h3>Inversiones</h3>
+        <p>Invierte en tu futuro con nuestras opciones de inversión. Diversifica tu portafolio y maximiza tus rendimientos con asesoramiento experto.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Sucursales Section -->
+  <div class="branches">
+    <h2>Sucursales</h2>
+    <div class="branch">
+      <img src="assets/img/sucursal1.jpg" alt="Sucursal ABCDEFG">
+      <div class="branch-details">
+        <h3>Sucursal 12 de Octubre</h3>
+        <p><strong>Dirección:</strong> Av. Ladrón de Guevara E11-253, Quito</p>
+        <p><strong>Horarios:</strong></p>
+        <ul>
+          <li>Lunes: 8am - 5pm</li>
+          <li>Martes: 8am - 5pm</li>
+          <li>Miércoles: 8am - 5pm</li>
+          <li>Jueves: 8am - 5pm</li>
+          <li>Viernes: 8am - 5pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="branch">
+      <img src="assets/img/sucursal2.jpg" alt="Sucursal ABCDEFG">
+      <div class="branch-details">
+        <h3>Sucursal Amazonas</h3>
+        <p><strong>Dirección:</strong> Av. Amazonas y Naciones Unidas, Quito</p>
+        <p><strong>Horarios:</strong></p>
+        <ul>
+          <li>Lunes: 7am - 6pm</li>
+          <li>Martes: 7am - 6pm</li>
+          <li>Miércoles: 7am - 6pm</li>
+          <li>Jueves: 7am - 6pm</li>
+          <li>Viernes: 7am - 6pm</li>
+          <li>Sábado: 9am - 1pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="branch">
+      <img src="assets/img/sucursal3.jpg" alt="Sucursal ABCDEFG">
+      <div class="branch-details">
+        <h3>Sucursal Benalcázar</h3>
+        <p><strong>Dirección:</strong> Av. 6 de Diciembre y Portugal, Quito</p>
+        <p><strong>Horarios:</strong></p>
+        <ul>
+          <li>Lunes: 8am - 5pm</li>
+          <li>Martes: 8am - 5pm</li>
+          <li>Miércoles: 8am - 5pm</li>
+          <li>Jueves: 8am - 5pm</li>
+          <li>Viernes: 8am - 5pm</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <button (click)="showChatbot = !showChatbot" class="chatbot-toggle">
+    <i class="fas fa-comments"></i>
+  </button>
+  <app-chatbot *ngIf="showChatbot" (close)="closeChatbot()"></app-chatbot>
+  
+
+
+  <div class="footer">
+    <div class="footer-column">
+      <img src="assets/logo3.png" width="250"  alt="icon">
+    </div>
+    <div class="footer-column">
+
+      <div class="mi-div">Contacto y Ayuda</div>
+      <div class="social-media">
+      <a href="#" target="_blank">
+        <img src="assets/social/telefono.png" alt="LinkedIn">
+        (02) 2999000</a>
+        <a href="#" target="_blank">
+          <img src="assets/social/celular.png" alt="LinkedIn">
+          (+593) 987654321</a>
+    </div>
+     <div class="social-media" >                 
+     <a href="https://www.facebook.com/profile.php?id=61563906604357&mibextid=LQQJ4d&rdid=x4PxDOuFrfuxMETi&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F2DBr4pWNkNA8eXdY%2F%3Fmibextid%3DLQQJ4d" target="_blank">
+      <img src="assets/social/facebook.png" alt="Facebook"> Facebook</a>
+      <a href="https://www.instagram.com/horizon.bank/" target="_blank">
+        <img src="assets/social/instagram.png" alt="Instagram">
+        Instagram
+      </a>
+      <a href="#" target="_blank">
+        <img src="assets/social/linkedin.png" alt="LinkedIn">
+        LinkedIn
+      </a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <div class="mi-div">Sobre Nosotros</div>
+      <div>¿Quienes Somos?</div>
+      <div>Trabaja con Nosotros</div>
+      <div>Trasparencia</div>
+    </div>
+    <div class="footer-column">
+      <div class="mi-div">Más Servicios</div>
+      <div>Políticas de Privacidad</div>
+    </div>
+  </div>
+  
+  
+  

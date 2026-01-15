@@ -1,0 +1,269 @@
+/* General styling */
+body, html {
+    font-family: 'Arial', sans-serif;
+    background-color: #99f1fd;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+ /* Header */
+ .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* Cambiar el fondo a blanco */
+  padding: 20px;
+  border-bottom: 8px solid #2cb5d3; /* Línea azul en la parte inferior */
+  position: static;
+  top: 0;
+  z-index: 1000;
+  height: 55px;
+  padding: 30px;
+}
+
+.header .logo {
+  margin-left: 20px; /* Mueve el logo un poco hacia la derecha */
+}
+
+.logo img {
+  height: 200px; /* Ajusta la altura del logo */
+  width: auto;
+}
+
+.content {
+    flex: 1 0 auto;
+    padding: 20px;
+    background: #F7F4E7;
+    display: flex; 
+}
+ 
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px; /* Añadir espacio para el footer */
+}
+
+h1 {
+    text-align: center;
+    color: #1A61A0;
+}
+
+form div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1A61A0;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #EBEBEB;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.button-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #37b6e9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin:5px;
+    position: sticky;
+}
+
+.button-container button:hover {
+    background-color: #29AECC;
+}
+
+small {
+    color: #E82F1F;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #2cb5d3;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  overflow: hidden;
+  margin-bottom: 0;
+  font-family: 'Magdelin Alt Regular';
+  font-size:  20px;
+  margin-top: auto;
+  
+}
+.footer-column {
+  padding:  0;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0px;
+  font-family: 'Magdelin Alt Regular';
+  font-size:  20px;
+ /* Alinea el contenido de cada columna a la izquierda */
+}
+.footer-column .img{
+height: 70px;
+margin-bottom: 0;
+transform: translateY(-10px); 
+
+}
+.social-media {
+margin-top: 10px;
+}
+.footer .social-media a {
+display: flex;
+align-items: center;
+margin: 5px 0;
+color: white;
+text-decoration: none;
+font-family: 'Magdelin Alt Regular';
+  font-size:  20px;
+}
+.footer .social-media a img {
+width: 24px; /* Ajusta el tamaño de los íconos */
+height: 24px;
+margin-right: 10px;
+object-fit: contain;
+
+}
+.footer-column .mi-div {
+margin-left: 20px; /* Ajusta el valor según sea necesario */
+margin-bottom: 10px;
+  font-weight: bold;
+}
+.footer a {
+  color: #F7F4E7;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service-card {
+      width: 90%;
+    }
+  
+    
+    .branch-details {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 450px) {
+
+    /* Ajustes generales */
+    body, html {
+        font-size: 14px; /* Disminuir el tamaño de fuente base */
+    }
+
+    /* Header */
+    .header {
+        flex-direction: column; /* Cambia la disposición a columna para mejor adaptación */
+        padding: 1px; /* Reduce el padding */
+        height: 100px; /* Ajusta la altura */
+        text-align: center; /* Centra el contenido del header */
+    }
+
+    .header .logo img {
+        height: 150px; /* Reduce la altura del logo */
+        margin: -15px auto 10px auto; /* Centra el logo verticalmente */
+    }
+
+    /* Contenido principal */
+    .content {
+        flex-direction: column; /* Cambia a disposición en columna */
+        padding: 10px; /* Reduce el padding */
+        max-width: 100%; /* Asegura que ocupe el ancho completo */
+    }
+
+    .container {
+        padding: 15px; /* Reduce el padding interno */
+        margin: 15px 0; /* Ajusta el margen superior/inferior */
+        box-shadow: none; /* Elimina o reduce la sombra en dispositivos móviles */
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 24px; /* Reduce el tamaño de la fuente del título */
+        margin-bottom: 15px; /* Reduce el margen inferior */
+    }
+
+    input {
+        width: calc(100% - 20px); /* Asegura que los inputs ocupen el ancho completo */
+        padding: 8px; /* Reduce el padding */
+    }
+
+    .button-container {
+        flex-direction: column; /* Coloca los botones en columna */
+        gap: 8px; /* Reduce la separación entre botones */
+        margin-top: 10px; /* Ajusta el margen superior */
+    }
+
+    .button-container button {
+        width: 100%; /* Asegura que los botones ocupen todo el ancho disponible */
+        padding: 8px; /* Ajusta el padding */
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+
+    small {
+        font-size: 12px; /* Reduce el tamaño de fuente de los mensajes pequeños */
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column; /* Cambia la disposición del footer a columna */
+        align-items: center; /* Centra el contenido horizontalmente */
+        padding: 10px; /* Reduce el padding */
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+        max-width: 95%;
+    }
+
+    .footer-column {
+        align-items: center; /* Centra el contenido de cada columna */
+        text-align: center; /* Asegura que el texto esté centrado */
+        margin-bottom: 10px; /* Añade espacio entre las columnas */
+    }
+
+    .footer .social-media a {
+        font-size: 14px; /* Reduce el tamaño de fuente de los enlaces */
+    }
+
+    .footer .social-media a img {
+        width: 20px; /* Reduce el tamaño de los iconos */
+        height: 20px;
+    }
+}

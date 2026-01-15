@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const emailController_1 = require("../controllers/emailController");
+const router = (0, express_1.Router)();
+router.post('/enviar-verificacion-correo', emailController_1.enviarCodigoVerificacion);
+router.post('/verificar-codigo', emailController_1.verificarCodigo);
+router.post('/enviar-codigo-recuperacion', emailController_1.enviarCodigoRecuperacion);
+router.post('/verificar-codigo-recuperacion', emailController_1.verificarCodigoRecuperacion);
+router.post('/cambiar-password', emailController_1.cambiarPassword);
+router.post('/enviar-notificacion-transferencia', emailController_1.enviarNotificacionTransferencia);
+router.post('/notificacion-cambio-password', emailController_1.enviarNotificacionCambioPassword);
+exports.default = router;

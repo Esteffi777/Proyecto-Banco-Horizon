@@ -1,0 +1,264 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center;
+  /* height: 100vh; */
+}
+
+.background-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; /* Asegura que la imagen esté detrás del content-wrapper */
+}
+
+.background-image {
+  width: 55%; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7ADBEF; /* Color azul más oscuro */
+  clip-path: polygon(45% 0%, 100% 0%, 100% 100%, 55% 100%);
+  z-index: -1; /* Asegura que el contenido esté por encima */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Asegura que esté encima del content-wrapper */
+  padding: 14px;
+  max-width: 500px;
+  background-color: #7ADBEF; /* Color celeste */
+  margin-left: auto; /* Empuja hacia la derecha */
+  margin-right: 45px; /* Centra horizontalmente */
+  transform: translateX(0); /* Elimina el desplazamiento adicional */
+}
+
+.header .logo img {
+  width: 300px; /* Ajusta el tamaño del logo según sea necesario */
+  margin-top: 10px;
+  margin-left: 840px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+label {
+  color: #ffffff;
+  margin-bottom: 5px;
+  margin-right: 200px;
+  margin-left: 88px;
+}
+
+input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #EBEBEB;
+  text-align: center;
+  margin-left: 88px;
+}
+
+.form-captcha {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.button-container button {
+  width: 150px;
+  padding: 10px;
+  background-color: #2a78bc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #288fea;
+}
+
+.forgot-credentials button {
+  width: 140px;
+  padding: 10px 20px;
+  background-color: #7ADBEF;
+  font-family: 'Magdelin Alt Text';
+  font-size: 16px;
+  border: 3px solid #ffffff;
+  color: white;
+  border-radius: 7px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.forgot-credentials button:hover {
+  background-color: #ffffff;
+  color: #7ADBEF;
+}
+
+.alert {
+  padding: 10px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.alert-danger {
+  background-color: #f44336; /* Red */
+}
+@media (max-width: 768px) {
+  .header .logo img {
+    width: 200px; /* Ajusta el tamaño del logo para pantallas más pequeñas */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-left: 200px; /* Centra el logo horizontalmente */
+    margin-right: 800px; /* Centra el logo horizontalmente */
+    display: block; /* Asegura que el logo esté en su propia línea */
+  }
+
+  .button-container {
+    flex-direction: column; /* Apila los botones verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+  }
+
+  .button-container button {
+    width: 100%; /* Ajusta el ancho de los botones para que ocupen el 100% del contenedor */
+    max-width: 200px; /* Ajusta el ancho máximo de los botones */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    padding: 8px; /* Ajusta el padding */
+    margin: 5px 0; /* Añade margen vertical entre los botones */
+  }
+
+  .forgot-credentials {
+    flex-direction: column; /* Apila los botones verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+  }
+
+  .forgot-credentials button {
+    width: 100%; /* Ajusta el ancho de los botones para que ocupen el 100% del contenedor */
+    max-width: 200px; /* Ajusta el ancho máximo de los botones */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    padding: 8px; /* Ajusta el padding */
+    margin: 5px 0; /* Añade margen vertical entre los botones */
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 30px; /* Ajusta el padding para dar espacio */
+    height: 800px;
+  }
+
+  .header .logo img {
+    margin-left: 50px;
+    margin-top: 30px;
+    width: 300px; /* Reduce el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+  }
+
+  .content {
+    padding: 10px; /* Reduce el padding en el contenedor de contenido */
+    margin-right: 0;
+  }
+
+  .header {
+    background-color: #7ADBEF; /* Asegura que el contenido esté por encima */
+    padding-top: 1px;
+  }
+
+  .form-group {
+    margin-bottom: 10px; /* Reduce el margen inferior entre los grupos de formulario */
+    width: 200px; /* Asegura que el grupo de formulario ocupe el ancho completo del contenedor */
+  }
+
+  .form-group label {
+    font-size: 14px; /* Reduce el tamaño del texto de la etiqueta */
+    margin-bottom: 5px; /* Reduce el margen inferior de la etiqueta */
+  }
+
+  .form-group input {
+    width: 100%; /* Asegura que el campo de entrada ocupe el ancho completo del grupo de formulario */
+    padding: 8px; /* Ajusta el padding del campo de entrada para hacerlo más pequeño */
+    font-size: 14px; /* Reduce el tamaño de la fuente en el campo de entrada */
+    border-radius: 4px; /* Ajusta el radio de borde para hacerlo más pequeño */
+  }
+
+  .form-captcha {
+    display: flex;
+    justify-content: center; /* Centra el CAPTCHA horizontalmente */
+    margin-bottom: 20px; /* Ajusta el margen inferior para dar espacio */
+    padding: 0 45px;
+    margin-top: 40px;
+  }
+
+  .form-captcha > .g-recaptcha {
+    transform: scale(0.7); /* Reduce el tamaño del CAPTCHA al 70% */
+    transform-origin: 0 0; /* Ajusta el origen de la transformación para mantener la alineación */
+    width: 100%; /* Asegura que el CAPTCHA ocupe el ancho completo del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    margin-top: 10px; /* Ajusta el margen superior si es necesario */
+  }
+
+  .forgot-credentials {
+    display: flex; /* Usa flexbox para alinear los botones */
+    flex-direction: column; /* Coloca los botones en una columna (uno encima del otro) */
+    align-items: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+    width: 100%; /* Asegura que el contenedor de botones ocupe el ancho completo del contenedor padre */
+  }
+
+  .forgot-credentials button {
+    width: 100%; /* Ajusta el ancho de los botones para que ocupen el 100% del contenedor */
+    max-width: 180px; /* Ajusta el ancho máximo de los botones */
+    font-size: 14px; /* Ajusta el tamaño de la fuente en los botones */
+    padding: 8px; /* Ajusta el padding en los botones */
+    margin: 5px 0; /* Añade margen vertical entre los botones */
+  }
+
+  .alert {
+    font-size: 14px; /* Ajusta el tamaño de la fuente en las alertas */
+    padding: 8px; /* Ajusta el padding en las alertas */
+  }
+}
+

@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<div class="header">
+  <div class="logo">
+    <img src="assets/logo3.png" alt="icon">
+  </div>
+</div>
+<div class="content">
+    <div id="comprobante">
+        <h2>Comprobante de Transferencia</h2>
+        <p><strong>ID de Transferencia:</strong> {{ transferenciaData?.idTransferencia }}</p>
+        <p><strong>Monto:</strong> {{ transferenciaData?.monto | currency }}</p>
+        <p><strong>Fecha:</strong> {{ transferenciaData?.fecha }}</p>
+        <p><strong>Cuenta Origen:</strong> {{ transferenciaData?.numeroCuenta }}</p>
+        <p><strong>Cuenta Destino:</strong> {{ transferenciaData?.cuentaDestino }}</p>
+        <!-- Cuadrado beige para la descripción -->
+        <div id="descripcion">
+            <p>{{ transferenciaData?.descripcion }}</p>
+        </div>
+        <!-- Contenedor para los botones -->
+        <div class="button-container">
+            <button (click)="descargarPDF()">
+                <i class="fas fa-file-pdf"></i> Descargar PDF
+            </button>
+            <button (click)="descargarImagen()">
+                <i class="fas fa-image"></i> Descargar Imagen
+            </button>
+            <button (click)="regresar()">
+                <i class="fas fa-arrow-left"></i> Regresar
+            </button>
+        </div>
+    </div>
+</div>
+<div class="footer">
+  <div class="footer-column">
+    <img src="assets/logo3.png" width="250"  alt="icon">
+  </div>
+  <div class="footer-column">
+
+    <div class="mi-div">Contacto y Ayuda</div>
+    <div class="social-media">
+    <a href="#" target="_blank">
+      <img src="assets/social/telefono.png" alt="LinkedIn">
+      (02) 2999000</a>
+      <a href="#" target="_blank">
+        <img src="assets/social/celular.png" alt="LinkedIn">
+        (+593) 987654321</a>
+  </div>
+   <div class="social-media" >                 
+   <a href="" target="_blank">
+    <img src="assets/social/facebook.png" alt="Facebook"> Facebook</a>
+    <a href="" target="_blank">
+      <img src="assets/social/instagram.png" alt="Instagram">
+      Instagram
+    </a>
+    <a href="#" target="_blank">
+      <img src="assets/social/linkedin.png" alt="LinkedIn">
+      LinkedIn
+    </a>
+    </div>
+  </div>
+  <div class="footer-column">
+    <div class="mi-div">Sobre Nosotros</div>
+    <div>¿Quienes Somos?</div>
+    <div>Trabaja con Nosotros</div>
+    <div>Trasparencia</div>
+  </div>
+  <div class="footer-column">
+    <div class="mi-div">Más Servicios</div>
+    <div>Políticas de Privacidad</div>
+  </div>
+</div>

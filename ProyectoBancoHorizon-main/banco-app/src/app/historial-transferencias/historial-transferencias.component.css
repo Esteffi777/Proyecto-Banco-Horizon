@@ -1,0 +1,428 @@
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.header {
+  width: calc(91% - 245px); /* Deja espacio para la barra lateral */
+  margin-left: 250px; /* Alinea el header con el contenido principal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 35px;
+  z-index: 500; /* Asegura que el header esté por debajo de la barra lateral */
+  position: relative;
+}
+
+.header h2 {
+  margin: 0;
+  padding: 5px;
+}
+
+h2 {
+  text-align: center;
+  color: #1A61A0;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1A61A0;
+}
+
+.user-profile {
+  position: absolute;
+  right: 5px;
+  background-color: #29AECC;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* Tamaño del icono */
+  font-weight: bold;
+  text-align: center;
+}
+
+.user-profile i {
+  margin: 0; /* Asegura que el ícono esté perfectamente centrado */
+}
+
+.main-container {
+  display: flex;
+  height: calc(100vh - 60px); /* Ajusta la altura para que la barra lateral y el contenido se ajusten a la pantalla */
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2cb5d3;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* Asegura que la barra lateral ocupe toda la altura de la ventana */
+  z-index: 1000; /* Coloca la barra lateral sobre el header */
+  transition: transform 0.3s ease;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #1A61A0;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.menu-toggle:focus {
+  outline: none;
+}
+
+.logo {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.logo img {
+  width: 250px;
+  margin-top: 10px;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  padding: 15px 10px;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar button i {
+  margin-right: 10px;
+}
+
+.sidebar button:hover {
+  background-color: #32c1e1;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background: #F3F5F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 250px; /* Deja espacio para la barra lateral */
+  max-width: calc(100% - 270px); /* Asegura que el contenido no se salga del espacio restante */
+  min-height: 100vh;
+}
+
+/* Estilos para el historial de transferencias */
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  background: #f9f9f9;
+  transition: background-color 0.3s ease, border-left 0.3s ease;
+}
+
+.ingreso {
+  border-left: 5px solid green;
+  background-color: #e6f4ea;
+}
+
+.egreso {
+  border-left: 5px solid red;
+  background-color: #fbe7e7;
+}
+
+li p {
+  margin: 5px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filters-container label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #0F265C;
+}
+
+.filters-container select,
+.filters-container input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.filters-container .button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.button-group .boton {
+  padding: 10px 15px;
+  background-color: #1A61A0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Magdelin Alt Bold';
+  transition: background-color 0.3s ease;
+}
+
+.button-group .boton:hover {
+  background-color: #29AECC;
+}
+
+.pdf-button-container .boton {
+  padding: 10px 15px;
+  background-color: #1A61A0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Magdelin Alt Bold';
+  transition: background-color 0.3s ease;
+}
+
+.pdf-button-container .boton:hover {
+  background-color: #29AECC;
+}
+
+/* Estilos generales */
+.header h2 {
+  font-size: 36px;
+  color: #1A61A0;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.sidebar {
+  background-color: #2cb5d3;
+  padding: 20px;
+}
+
+.sidebar button {
+  font-size: 16px;
+  padding: 15px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #32c1e1;
+}
+
+.sidebar button i {
+  margin-right: 10px;
+}
+
+.content {
+  padding: 20px;
+  background: #F3F5F7;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 250px;
+  max-width: calc(100% - 270px);
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  /* Sidebar */
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .logo img {
+    width: 220px; /* Ajusta el tamaño de la imagen del logo para pantallas pequeñas */
+    margin-top: 10px; /* Ajusta este valor para controlar la posición vertical */
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .header {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titulo {
+    flex: 1; /* Permite que ocupe el máximo ancho disponible */
+    text-align: center;
+  }
+
+  .menu-toggle {
+    margin-right: 10px; /* Asegura que el botón de menú tenga un poco de espacio */
+  }
+
+  .user-profile {
+    position: absolute;
+    top: 10px;
+    right: 15px; /* Asegura que el perfil esté en la esquina derecha */
+    background-color: #29AECC;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .content {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .sidebar.hidden {
+    display: none;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900; /* Debe estar por debajo de la barra lateral */
+    display: none; /* Oculto por defecto */
+  }
+  
+  .sidebar.active + .overlay {
+    display: block;
+  }
+
+  h2 {
+    text-align: center;
+    color: #1A61A0;
+    font-family: 'Poppins', sans-serif; /* Cambia a 'Roboto' o 'Lato' si prefieres */
+    font-weight: bold;
+    font-size: 25px; /* Ajusta según prefieras */
+    margin-bottom: 20px;
+  }
+  /* Container */
+  .container {
+    padding: 17px; /* Reduce el padding dentro del contenedor */
+    margin: 25px auto; /* Ajusta el margen */
+    max-width: 80%; /* Asegura que el contenedor no se desborde */
+    width: 300px;
+    margin-left: auto; /* Automático para el margen izquierdo */
+    margin-right: auto; /* Margen derecho a 0 para que no haya espacio en la derecha */
+  }
+
+  /* Filtrar opciones */
+  .filters-container {
+    flex-direction: column; /* Cambia la dirección de los filtros a columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    gap: 10px; /* Reduce el espacio entre los elementos */
+    max-width: 90%;
+  }
+
+  .filters-container label {
+    font-size: 14px; /* Reduce el tamaño de la fuente de las etiquetas */
+  }
+
+  .filters-container select,
+  .filters-container input {
+    width: 100%; /* Asegura que los inputs ocupen todo el ancho disponible */
+    font-size: 12px; /* Reduce el tamaño de la fuente de los inputs */
+  }
+
+  /* Lista de transferencias */
+  ul {
+    padding: 0;
+    width: 100%; /* Asegura que la lista ocupe todo el ancho disponible */
+  }
+
+  li {
+    font-size: 14px; /* Reduce el tamaño de la fuente en la lista */
+    padding: 10px; /* Reduce el padding en los items de la lista */
+    margin-bottom: 10px; /* Reduce el margen inferior */
+  }
+
+  li p {
+    font-size: 14px; /* Ajusta el tamaño del texto */
+  }
+
+  /* Botones en los filtros */
+  .button-group .boton {
+    padding: 8px 10px; /* Ajusta el padding de los botones */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+  }
+}
+@media (min-width: 768px) {
+  .menu-toggle {
+      display: none;
+  }
+}

@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div class="header">
+  <button class="menu-toggle" (click)="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="user-profile">
+    <i class="fas fa-user"></i>
+  </div>
+  <div class="welcome">
+    <h2>¡Bienvenido&#64;, {{ nombreCliente }}!</h2>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="sidebar"> 
+    <div class="logo">
+      <img src="assets/logo3.1.png" alt="icon">
+    </div>
+    <button (click)="redirectTo('cambio-contraseña')"><i class="fas fa-key"></i> Cambio Contraseña</button>
+    <button (click)="redirectTo('crear-cuenta')"><i class="fas fa-plus"></i> Agregar Cuenta</button>
+    <button (click)="redirectTo('transferencia')"><i class="fas fa-exchange-alt"></i> Transferencia</button>
+    <button (click)="redirectToHistorialTransferencias()"><i class="fas fa-history"></i> Historial de Transferencias</button>
+    <button (click)="redirectTo('seleccion-servicio')"><i class="fas fa-money-bill-wave"></i> Pagar Servicios</button>
+    <button (click)="redirectTo('/')"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+  </div>
+  <div class="overlay" (click)="toggleSidebar()"></div> 
+  <div class="content">
+    <h3>Cuentas</h3>
+    
+    <div class="container">
+      <div class="account-info">
+        <div class="account-details-wrapper" *ngIf="selectedAccount">
+          <div class="account-details">
+            <p>{{ selectedAccount.tipo }}</p>
+            <p>Número de cuenta: {{ selectedAccount.numeroCuenta }}</p>
+          </div>
+          <div class="account-balance">
+            <p><strong>{{ mostrarSaldo ? (selectedAccount.saldo | currency) : '****' }}</strong></p>
+            <button *ngIf="cuentas.length > 1" (click)="toggleAccounts()">
+              <i class="fas" [ngClass]="showAccounts ? 'fa-caret-up' : 'fa-caret-down'"></i>
+            </button>
+            <button (click)="toggleSaldo()">
+              <i class="fas" [ngClass]="mostrarSaldo ? 'fa-eye-slash' : 'fa-eye'"></i>
+            </button>
+          </div>
+        </div>
+        <div class="showAccounts" *ngIf="showAccounts">
+          <ul>
+            <li *ngFor="let cuenta of cuentas" (click)="onAccountClick(cuenta)">
+              <div class="account-details">
+                <p>{{ cuenta.tipo }}</p>
+                <p>{{ cuenta.numeroCuenta }}</p>
+              </div>
+              <div class="account-balance">
+                <p><strong>{{ mostrarSaldo ? (cuenta.saldo | currency) : '****' }}</strong></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr class="separator">
+    <h3>Conversor</h3>
+    <div class="currency-converter">
+      <label for="amount">Cantidad:</label>
+      <input type="number" [(ngModel)]="amount" placeholder="Ingresa la cantidad">
+      <label for="currency">Moneda:</label>
+      <select [(ngModel)]="currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+      </select>
+      <button (click)="convertCurrency()">Convertir</button>
+      <p>{{ result }}</p>
+    </div>
+    
+  </div>
+</div>
+
+<script src="Conversor.js"></script>

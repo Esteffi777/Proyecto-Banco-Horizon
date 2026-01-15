@@ -1,0 +1,268 @@
+/* Estilos generales */
+body, html {
+    font-family: 'Arial', sans-serif;
+    background-color: #99f1fd; /* Fondo celeste */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo del contenedor de la cabecera */
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* Cambiar el fondo a blanco */
+    padding: 20px;
+    border-bottom: 8px solid #2cb5d3; /* Línea azul en la parte inferior */
+    position: static;
+    top: 0;
+    z-index: 1000;
+    height: 55px;
+    padding: 30px;
+  }
+  
+  .header .logo {
+    margin-left: 20px; /* Mueve el logo un poco hacia la derecha */
+  }
+  
+  .logo img {
+    height: 200px; /* Ajusta la altura del logo */
+    width: auto;
+  }
+  .content {
+    flex: 1; /* El contenedor debe llenar el espacio restante */
+    padding: 20px;
+    background: #F3F5F7; /* Fondo celeste */
+    display: flex;
+    justify-content: center; /* Centramos el contenido dentro del contenedor */
+    align-items: center; /* Centra verticalmente */
+    min-height: calc(70vh - 75px); /* Ajusta para considerar el header */
+}
+
+#comprobante {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff; /* Fondo blanco del comprobante */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#comprobante h2 {
+    color: #1A61A0; /* Color azul para los títulos */
+    text-align: center;
+}
+
+#comprobante p {
+    margin: 10px 0;
+}
+
+#descripcion {
+    background-color: #F3F5F7; /* Color beige */
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Centramos los botones */
+}
+
+.button-container button {
+    padding: 10px 20px; /* Ajuste del padding para un mejor acabado */
+    background-color: #1A61A0; /* Color azul */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+.button-container button:hover {
+    background-color: #29AECC; /* Color azul claro en hover */
+}
+
+.button-container button i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .button-container button {
+        width: 100%; /* Botones en ancho completo en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .button-container button {
+        width: 45%; /* Botones en ancho del 45% en pantallas medianas */
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .button-container button {
+        width: 45%; /* Botones en ancho del 45% en pantallas grandes */
+    }
+}
+
+@media (min-width: 1281px) {
+    .button-container button {
+        width: 30%; /* Botones en ancho del 30% en pantallas extra grandes */
+    }
+}
+
+
+/* Footer styling */
+.footer {
+    background-color: #2cb5d3;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    overflow: hidden;
+    margin-bottom: 0;
+    font-family: 'Magdelin Alt Regular';
+    font-size:  20px;
+    margin-top: auto;
+    
+  }
+  .footer-column {
+    padding:  0;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0px;
+    font-family: 'Magdelin Alt Regular';
+    font-size:  20px;
+   /* Alinea el contenido de cada columna a la izquierda */
+  }
+  .footer-column .img{
+  height: 70px;
+  margin-bottom: 0;
+  transform: translateY(-10px); 
+  
+  }
+  .social-media {
+  margin-top: 10px;
+  }
+  .footer .social-media a {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  color: white;
+  text-decoration: none;
+  font-family: 'Magdelin Alt Regular';
+    font-size:  20px;
+  }
+  .footer .social-media a img {
+  width: 24px; /* Ajusta el tamaño de los íconos */
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+  
+  }
+  .footer-column .mi-div {
+  margin-left: 20px; /* Ajusta el valor según sea necesario */
+  margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .footer a {
+    color: #F7F4E7;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 450px) {
+
+    /* Ajustes generales */
+    body, html {
+        font-size: 14px; /* Disminuir el tamaño de fuente base */
+    }
+
+    /* Header */
+    .header {
+        flex-direction: column; /* Cambia la disposición a columna para mejor adaptación */
+        padding: 10px; /* Reduce el padding */
+        height: 100px; /* Ajusta la altura */
+        text-align: center; /* Centra el contenido del header */
+    }
+
+    .header .logo img {
+        height: 130px; /* Reduce la altura del logo */
+    }
+
+    /* Contenido principal */
+    .content {
+        flex-direction: column; /* Cambia a disposición en columna */
+        padding: 10px; /* Reduce el padding */
+        margin-left: 0; /* Quita margen izquierdo */
+        max-width: 100%; /* Asegura que ocupe el ancho completo */
+    }
+
+    #comprobante {
+        padding: 15px; /* Reduce el padding interno */
+        margin: 15px 0; /* Ajusta el margen superior/inferior */
+    }
+
+    #comprobante h2 {
+        font-size: 24px; /* Reduce el tamaño de la fuente del título */
+    }
+
+    #descripcion {
+        padding: 10px; /* Reduce el padding interno */
+        margin: 5px 0; /* Ajusta los márgenes */
+    }
+
+    /* Botones */
+    .button-container {
+        flex-direction: column; /* Coloca los botones en columna */
+        gap: 8px; /* Reduce la separación entre botones */
+    }
+
+    .button-container button {
+        padding: 8px 15px; /* Ajusta el padding */
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+        width: 100%; /* Botones a ancho completo */
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column; /* Cambia la disposición del footer a columna */
+        align-items: center; /* Centra el contenido horizontalmente */
+        padding: 10px; /* Reduce el padding */
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+
+    .footer-column {
+        align-items: center; /* Centra el contenido de cada columna */
+        text-align: center; /* Asegura que el texto esté centrado */
+        margin-bottom: 10px; /* Añade espacio entre las columnas */
+    }
+
+    .footer .social-media a {
+        font-size: 14px; /* Reduce el tamaño de fuente de los enlaces */
+    }
+
+    .footer .social-media a img {
+        width: 20px; /* Reduce el tamaño de los iconos */
+        height: 20px;
+    }
+}

@@ -1,0 +1,154 @@
+<div class="header">
+  <div class="logo">
+    <img src="assets/logo3.png" alt="icon">
+  </div>
+</div>
+
+<div class="content">
+  <div class="container">
+    <h1>Registro</h1>
+    <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+      <!-- Cedula Field -->
+      <div>
+        <label for="cedula">Cédula</label>
+        <input id="cedula" formControlName="cedula" placeholder="Cédula">
+        <small *ngIf="registroForm.get('cedula')?.invalid && registroForm.get('cedula')?.touched">
+          <span *ngIf="registroForm.get('cedula')?.errors?.['required']">Cédula es requerida</span>
+          <span *ngIf="registroForm.get('cedula')?.errors?.['pattern']">Cédula debe tener 10 dígitos</span>
+        </small>
+      </div>
+
+      <!-- Nombres Field -->
+      <div>
+        <label for="nombres">Nombres</label>
+        <input id="nombres" formControlName="nombres" placeholder="Nombres">
+        <small *ngIf="registroForm.get('nombres')?.invalid && registroForm.get('nombres')?.touched">
+          <span *ngIf="registroForm.get('nombres')?.errors?.['required']">Nombres son requeridos</span>
+          <span *ngIf="registroForm.get('nombres')?.errors?.['singleWord']">Debe ingresar los dos nombres</span>
+        </small>
+      </div>
+
+      <!-- Apellidos Field -->
+      <div>
+        <label for="apellidos">Apellidos</label>
+        <input id="apellidos" formControlName="apellidos" placeholder="Apellidos">
+        <small *ngIf="registroForm.get('apellidos')?.invalid && registroForm.get('apellidos')?.touched">
+          <span *ngIf="registroForm.get('apellidos')?.errors?.['required']">Apellidos son requeridos</span>
+          <span *ngIf="registroForm.get('apellidos')?.errors?.['singleWord']">Debe ingresar los dos apellidos</span>
+        </small>
+      </div>
+
+      <!-- Fecha de Nacimiento Field -->
+      <div>
+        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+        <input id="fechaNacimiento" type="date" formControlName="fechaNacimiento">
+        <small *ngIf="registroForm.get('fechaNacimiento')?.invalid && registroForm.get('fechaNacimiento')?.touched">
+          <span *ngIf="registroForm.get('fechaNacimiento')?.errors?.['required']">Fecha de nacimiento es requerida</span>
+          <span *ngIf="registroForm.get('fechaNacimiento')?.errors?.['ageInvalid']">Debe ser mayor de 18 años</span>
+        </small>
+      </div>
+
+      <!-- Celular Field -->
+      <div>
+        <label for="celular">Celular</label>
+        <input id="celular" formControlName="celular" placeholder="Celular">
+        <small *ngIf="registroForm.get('celular')?.invalid && registroForm.get('celular')?.touched">
+          <span *ngIf="registroForm.get('celular')?.errors?.['required']">Celular es requerido</span>
+          <span *ngIf="registroForm.get('celular')?.errors?.['pattern']">Celular debe tener 10 dígitos</span>
+        </small>
+      </div>
+
+      <!-- Email Field -->
+      <div>
+        <label for="correo">Correo</label>
+        <input id="correo" formControlName="correo" placeholder="Correo">
+        <small *ngIf="registroForm.get('correo')?.invalid && registroForm.get('correo')?.touched">
+          <span *ngIf="registroForm.get('correo')?.errors?.['required']">Correo es requerido</span>
+          <span *ngIf="registroForm.get('correo')?.errors?.['email']">Correo no es válido</span>
+        </small>
+      </div>
+
+      <!-- Provincia Field -->
+      <div>
+        <label for="provincia">Provincia</label>
+        <input id="provincia" formControlName="provincia" placeholder="Provincia">
+        <small *ngIf="registroForm.get('provincia')?.invalid && registroForm.get('provincia')?.touched">
+          <span *ngIf="registroForm.get('provincia')?.errors?.['required']">Provincia es requerida</span>
+        </small>
+      </div>
+
+      <!-- Ciudad Field -->
+      <div>
+        <label for="ciudad">Ciudad</label>
+        <input id="ciudad" formControlName="ciudad" placeholder="Ciudad">
+        <small *ngIf="registroForm.get('ciudad')?.invalid && registroForm.get('ciudad')?.touched">
+          <span *ngIf="registroForm.get('ciudad')?.errors?.['required']">Ciudad es requerida</span>
+        </small>
+      </div>
+
+      <!-- Calle Principal Field -->
+      <div>
+        <label for="callePrincipal">Calle Principal</label>
+        <input id="callePrincipal" formControlName="callePrincipal" placeholder="Calle Principal">
+        <small *ngIf="registroForm.get('callePrincipal')?.invalid && registroForm.get('callePrincipal')?.touched">
+          <span *ngIf="registroForm.get('callePrincipal')?.errors?.['required']">Calle principal es requerida</span>
+        </small>
+      </div>
+
+      <!-- Calle Secundaria Field -->
+      <div>
+        <label for="calleSecundaria">Calle Secundaria</label>
+        <input id="calleSecundaria" formControlName="calleSecundaria" placeholder="Calle Secundaria">
+        <small *ngIf="registroForm.get('calleSecundaria')?.invalid && registroForm.get('calleSecundaria')?.touched">
+          <span *ngIf="registroForm.get('calleSecundaria')?.errors?.['required']">Calle secundaria es requerida</span>
+        </small>
+      </div>
+
+      <div class="button-container">
+        <button (click)="redirectTo('')">Regresar</button>
+        <button type="submit" [disabled]="isProcessing ||!registroForm.valid">Registrar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-column">
+    <img src="assets/logo3.png" width="250"  alt="icon">
+  </div>
+  <div class="footer-column">
+
+    <div class="mi-div">Contacto y Ayuda</div>
+    <div class="social-media">
+    <a href="#" target="_blank">
+      <img src="assets/social/telefono.png" alt="LinkedIn">
+      (02) 2999000</a>
+      <a href="#" target="_blank">
+        <img src="assets/social/celular.png" alt="LinkedIn">
+        (+593) 987654321</a>
+  </div>
+   <div class="social-media" >                 
+   <a href="" target="_blank">
+    <img src="assets/social/facebook.png" alt="Facebook"> Facebook</a>
+    <a href="" target="_blank">
+      <img src="assets/social/instagram.png" alt="Instagram">
+      Instagram
+    </a>
+    <a href="#" target="_blank">
+      <img src="assets/social/linkedin.png" alt="LinkedIn">
+      LinkedIn
+    </a>
+    </div>
+  </div>
+  <div class="footer-column">
+    <div class="mi-div">Sobre Nosotros</div>
+    <div>¿Quienes Somos?</div>
+    <div>Trabaja con Nosotros</div>
+    <div>Trasparencia</div>
+  </div>
+  <div class="footer-column">
+    <div class="mi-div">Más Servicios</div>
+    <div>Políticas de Privacidad</div>
+  </div>
+</div>
+

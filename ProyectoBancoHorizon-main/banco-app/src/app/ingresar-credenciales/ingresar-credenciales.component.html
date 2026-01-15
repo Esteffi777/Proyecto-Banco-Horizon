@@ -1,0 +1,94 @@
+<div class="header">
+    <div class="logo">
+      <img src="assets/logo3.png" alt="icon">
+    </div>
+  </div>
+  
+<div class="main-content">
+    <div class="content">
+        <div class="container">
+            <h1>Registro</h1>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <!-- Nombre de Usuario Field -->
+                <div>
+                    <label for="nombreUsuario">Nombre de Usuario</label>
+                    <input id="nombreUsuario" formControlName="nombreUsuario" placeholder="Nombre de Usuario">
+                    <small *ngIf="loginForm.get('nombreUsuario')?.invalid && loginForm.get('nombreUsuario')?.touched">
+                        <span *ngIf="loginForm.get('nombreUsuario')?.errors?.['required']">Nombre de usuario es requerido</span>
+                    </small>
+                </div>
+
+                <!-- Contraseña Field -->
+                <div>
+                    <label for="contraseña">Contraseña</label>
+                    <input id="contraseña" type="password" formControlName="contraseña" placeholder="Contraseña">
+                    <small *ngIf="loginForm.get('contraseña')?.invalid && loginForm.get('contraseña')?.touched">
+                        <span *ngIf="loginForm.get('contraseña')?.errors?.['required']">Contraseña es requerida</span>
+                        <span *ngIf="loginForm.get('contraseña')?.errors?.['passwordInvalid']">Contraseña no cumple con los requisitos</span>
+                    </small>
+                    <ul>
+                        <li [class.valid]="passwordCriteria.length">Al menos 6 caracteres</li>
+                        <li [class.valid]="passwordCriteria.uppercase">Al menos un caracter en mayúsculas</li>
+                        <li [class.valid]="passwordCriteria.number">Al menos un número</li>
+                        <li [class.valid]="passwordCriteria.specialChar">Al menos un caracter especial</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <label for="confirmarContraseña">Confirmar Contraseña</label>
+                    <input id="confirmarContraseña" type="password" formControlName="confirmarContraseña" placeholder="Confirmar Contraseña">
+                    <small *ngIf="loginForm.get('confirmarContraseña')?.invalid && loginForm.get('confirmarContraseña')?.touched">
+                        <span *ngIf="loginForm.get('confirmarContraseña')?.errors?.['required']">Confirmar contraseña es requerida</span>
+                    </small>
+                    <small *ngIf="loginForm.errors?.['mismatch'] && loginForm.get('confirmarContraseña')?.touched">
+                        <span>Las contraseñas no coinciden</span>
+                    </small>
+                </div>
+
+                <div class="button-container">
+                    <button (click)="redirectTo('')">Regresar</button>
+                    <button type="submit" [disabled]="isProcessing ">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-column">
+      <img src="assets/logo3.png" width="250"  alt="icon">
+    </div>
+    <div class="footer-column">
+  
+      <div class="mi-div">Contacto y Ayuda</div>
+      <div class="social-media">
+      <a href="#" target="_blank">
+        <img src="assets/social/telefono.png" alt="LinkedIn">
+        (02) 2999000</a>
+        <a href="#" target="_blank">
+          <img src="assets/social/celular.png" alt="LinkedIn">
+          (+593) 987654321</a>
+    </div>
+     <div class="social-media" >                 
+     <a href="" target="_blank">
+      <img src="assets/social/facebook.png" alt="Facebook"> Facebook</a>
+      <a href="" target="_blank">
+        <img src="assets/social/instagram.png" alt="Instagram">
+        Instagram
+      </a>
+      <a href="#" target="_blank">
+        <img src="assets/social/linkedin.png" alt="LinkedIn">
+        LinkedIn
+      </a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <div class="mi-div">Sobre Nosotros</div>
+      <div>¿Quienes Somos?</div>
+      <div>Trabaja con Nosotros</div>
+      <div>Trasparencia</div>
+    </div>
+    <div class="footer-column">
+      <div class="mi-div">Más Servicios</div>
+      <div>Políticas de Privacidad</div>
+    </div>
+  </div>

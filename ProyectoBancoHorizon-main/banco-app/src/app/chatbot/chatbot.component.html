@@ -1,0 +1,25 @@
+<div class="chatbot-container">
+  <div class="chatbot-header">
+    <h4>Chatbot</h4>
+    <button class="close-button" (click)="closeChatbot()">X</button>
+  </div>
+  <div class="chatbot-messages" #chatbotMessages>
+    <div *ngFor="let message of messages">
+      <div class="message user" *ngIf="message.text.startsWith('User:')">
+        <div class="message-bubble">{{ message.text }}</div>
+      </div>
+      <div class="message bot" *ngIf="message.text.startsWith('Bot:')">
+        <div class="message-bubble">{{ message.text }}</div>
+      </div>
+      <div class="options" *ngIf="message.options">
+        <button class="option-button" *ngFor="let option of message.options" (click)="selectOption(option)">
+          {{ option }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="chatbot-input">
+    <input [(ngModel)]="userInput" placeholder="Escribe tu mensaje" />
+    <button (click)="sendMessage(userInput)">Enviar</button>
+  </div>
+</div>
